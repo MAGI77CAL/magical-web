@@ -1,29 +1,28 @@
-// src/components/Header.jsx
+import logo from "../assets/logo.png";
 
-const Header = () => {
-    return (
-      <header className="flex items-center justify-between px-6 py-4 bg-white shadow-md sticky top-0 z-50">
+export default function Header() {
+  return (
+    <header className="bg-white shadow-sm fixed top-0 w-full z-50">
+      <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
         <div className="flex items-center gap-2">
-          <img src="/magical-logo.png" alt="Magical Logo" className="w-8 h-8" />
-          <h1 className="text-xl font-bold text-gray-800">Magical</h1>
+          <img src={logo} alt="Magical Logo" className="h-8 w-auto" />
+          <span className="text-xl font-bold text-gray-900">Magical</span>
         </div>
-        <nav className="hidden md:flex space-x-6 text-gray-700 text-sm">
+        <nav className="hidden md:flex space-x-6 text-sm text-gray-700">
           <a href="#home" className="hover:text-black">Home</a>
           <a href="#projects" className="hover:text-black">Projects</a>
           <a href="#about" className="hover:text-black">About</a>
           <a href="#contact" className="hover:text-black">Contact</a>
         </nav>
         <a
-          href="https://pf.kakao.com/_your_channel" // <-- 여기에 지훈이의 카카오톡 채널 URL 넣어줘
+          href="https://open.kakao.com/o/your-link"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-green-600 text-white px-4 py-2 rounded-full text-sm hover:bg-green-700"
+          className="bg-green-600 text-white text-sm px-4 py-2 rounded-full hover:bg-green-700"
         >
-          💬 카톡 문의하기
+          카톡 문의하기
         </a>
-      </header>
-    );
-  };
-  
-  export default Header;
-  
+      </div>
+    </header>
+  );
+}

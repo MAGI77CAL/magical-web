@@ -1,20 +1,18 @@
-// src/components/ProjectCard.jsx
-
-const ProjectCard = ({ image, title, subtitle, description, link }) => {
-    return (
-      <div className="bg-white rounded-xl shadow-md p-4 text-center">
-        <img src={image} alt={title} className="w-full h-48 object-cover rounded-md mb-4" />
-        <h3 className="text-xl font-semibold">{title}</h3>
-        <p className="text-sm text-gray-600">{subtitle}</p>
-        <a
-          href={link}
-          className="inline-block mt-4 px-4 py-2 bg-black text-white text-sm rounded-full hover:bg-gray-800 transition"
-        >
-          더 알아보기
-        </a>
+export default function ProjectCard({ title, description, image }) {
+  return (
+    <div className="bg-white rounded-xl shadow p-5 text-center">
+      <div className="w-full h-28 flex items-center justify-center mb-4">
+        <img
+          src={image}
+          alt={title}
+          className="max-h-full max-w-[60%] object-contain"
+        />
       </div>
-    );
-  };
-  
-  export default ProjectCard;
-  
+      <h3 className="text-lg font-semibold">{title}</h3>
+      <p className="text-sm text-gray-500 mb-4">{description}</p>
+      <button className="bg-black text-white text-sm px-4 py-2 rounded hover:bg-gray-800 transition">
+        더 알아보기
+      </button>
+    </div>
+  );
+}

@@ -1,7 +1,19 @@
-<section className="text-center py-24 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white">
-  <h1 className="text-5xl font-bold">사람과 가치를 잇는 감성 플랫폼</h1>
-  <p className="mt-4 text-lg">브랜드, 콘텐츠, 그리고 따뜻한 연결을 만듭니다.</p>
-  <button className="mt-6 px-6 py-3 bg-white text-purple-600 font-semibold rounded-full shadow hover:bg-gray-100 transition">
-    프로젝트 보러가기
-  </button>
-</section>
+export default function Hero() {
+  return (
+    <section id="home" className="text-center py-24">
+      <h1 className="text-5xl font-bold mb-4">Magical</h1>
+      <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+        사람과 가치를 잇는 <br className="md:hidden" />
+        감성 콘텐츠 기업
+      </p>
+      <div className="space-x-4">
+        <button className="border border-black px-6 py-2 rounded-md hover:bg-black hover:text-white transition">
+          View Projects
+        </button>
+        <button className="border border-gray-300 px-6 py-2 rounded-md hover:bg-gray-100 transition">
+          Get in Touch
+        </button>
+      </div>
+    </section>
+  );
+}
