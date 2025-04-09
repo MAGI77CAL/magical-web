@@ -3,6 +3,7 @@ import tasteSpot from "../assets/taste-spot.png";
 import goldenHand from "../assets/golden-hand.png";
 import magicalMoment from "../assets/magical-magazine.png";
 
+
 export default function Projects() {
   return (
     <section id="projects" className="py-20">
